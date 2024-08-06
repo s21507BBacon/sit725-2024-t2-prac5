@@ -1,0 +1,26 @@
+{
+  "name": "sit725-2024-t2-prac3",
+  "version": "1.0.0",
+  "description": "SIT725 week 3 prac",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s21507BBacon/sit725-2024-t2-prac3.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "Bootstrap"
+  ],
+  "author": "Bryce Daniel Bacon",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/s21507BBacon/sit725-2024-t2-prac3/issues"
+  },
+  "homepage": "https://github.com/s21507BBacon/sit725-2024-t2-prac3#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

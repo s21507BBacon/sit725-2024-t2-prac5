@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SIT 725 Prac 3</title>
+    <meta name="description" content="basic template for SIT 725 Prac 3" />
+    <meta name="author" content="SitePoint" />
+    <meta property="og:title" content="SIT 725 Prac 3" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="basic template for SIT 725 Prac 3"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">LinkedIn</a></li>
+        <li><a href="#!">GitHub</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">LinkTree</a></li>
+      </ul>
+      <nav>
+        <div style="padding: bottom 20px;px ;" class="nav-wrapper">
+          <a href="#!" class="brand-logo"
+            ><img
+              class="user-image-size"
+              src="images/IMG_0144-CB.png"
+              alt="Logo"
+          /></a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a class="dropdown-trigger" href="#!" data-target="dropdown1"
+                >Socials<i class="material-icons right">arrow_drop_down</i></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </nav>
+
+    <!-- Navbar goes here -->
+
+    <!-- Page Layout here -->
+    <div class="row">
+      <div class="col s12 m4 l3">
+<!-- Everything up to button -->
+<main class="main-body">
+      <div class="container ">
+        <div class="row">
+          <div class="col s12 center-align">
+            <h1 id="heading">Welcome to SIT725 PIGS GALORE</h1>
+            <p class="flow-text">
+              Here you will find information on our fav pigs
+            </p>
+          </div>
+          <div class="col s12 center-align">
+            <img
+              class="materialboxed materialboxed-image responsive-img"
+              src="images/IMG_0144-CB.png"
+            />
+          </div>
+          <div class="col s12 center-align">
+            <a
+              class="btn-floating btn-large pulse click-me-button modal-trigger custom-hover"
+              id="clickMeButton"
+              data-target="modal1"
+              ><i class="material-icons">person_add</i></a
+            >
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+      <div class="col s12 m8 l9">
+        <!--Cards-->
+ <div class="row" id="card-section">
+          <div class="col s4 center-align">
+            <div class="card medium">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/duroc.webp" />
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4"
+                  >Duroc<i class="material-icons right">more_vert</i></span
+                >
+                <p><a href="#">About Duroc</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"
+                  >Duroc<i class="material-icons right">close</i></span
+                >
+                <p class="card-text">
+                  The Duroc is an American breed of domestic pig. It varies in
+                  color from golden to a dark reddish-brown; it is large-framed
+                  and muscular, of medium length, with partially-drooping ears."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    
+       
+     <div id="modal1" class="modal modal-fixed-footer pink lighten-5 modal-custom">
+  <div class="row modal-content">
+    <form class="col s12" id="formSubmit">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Placeholder" id="first_name" type="text" class="validate modal-custom-input" />
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate modal-custom-input" />
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate modal-custom-input" />
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate modal-custom-input" />
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 center-align">
+          <a class="waves-effect waves-light btn modal-custom-button" id="formSubmit">Submit</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">PIGS R US</h5>
+            <p class="grey-text text-lighten-4">
+              THIS IS ALL ABOUT PIGS 
+            </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">LinkedIn</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">The Website Formly known As Twitter (X)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © BaconChat 2024
+          <a class="grey-text text-lighten-4 right" href="#!">Pig Links</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
