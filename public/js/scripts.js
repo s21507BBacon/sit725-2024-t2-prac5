@@ -1,61 +1,10 @@
-const cardList = [
-  {
-    title: "Kunekune",
-    image: "images/kunekune.jpg",
-    link: "About Kunekune",
-    description:
-      "The Kunekune is a small breed of domestic pig from New Zealand. Kunekune are hairy with a rotund build, and may bear wattles hanging from their lower jaws. Their colour ranges from black and white, to ginger, cream, gold-tip, black, brown, and tricoloured. They have a docile, friendly nature. Source: Wikipedia",
-  },
-  {
-    title: "Mangalica",
-    image: "images/mang.jpg",
-    link: "About Mangalica",
-    description:
-      "The Mangalica is a Hungarian breed of domestic pig. It was developed in the mid-19th century by crossbreeding breeds from the nearby Romanian Salonta and Hungarian Bakony with the European wild boar and the Serbian Šumadija breed. The Mangalica pig grows a thick, curly coat of hair. Source: Wikipedia",
-  },
-  {
-    title: "Kunekune",
-    image: "images/kunekune.jpg",
-    link: "About Kunekune",
-    description:
-      "The Kunekune is a small breed of domestic pig from New Zealand. Kunekune are hairy with a rotund build, and may bear wattles hanging from their lower jaws. Their colour ranges from black and white, to ginger, cream, gold-tip, black, brown, and tricoloured. They have a docile, friendly nature. Source: Wikipedia",
-  },
-  {
-    title: "Mangalica",
-    image: "images/mang.jpg",
-    link: "About Mangalica",
-    description:
-      "The Mangalica is a Hungarian breed of domestic pig. It was developed in the mid-19th century by crossbreeding breeds from the nearby Romanian Salonta and Hungarian Bakony with the European wild boar and the Serbian Šumadija breed. The Mangalica pig grows a thick, curly coat of hair. Source: Wikipedia",
-  },
-  {
-    title: "Kunekune",
-    image: "images/kunekune.jpg",
-    link: "About Kunekune",
-    description:
-      "The Kunekune is a small breed of domestic pig from New Zealand. Kunekune are hairy with a rotund build, and may bear wattles hanging from their lower jaws. Their colour ranges from black and white, to ginger, cream, gold-tip, black, brown, and tricoloured. They have a docile, friendly nature. Source: Wikipedia",
-  },
-  {
-    title: "Mangalica",
-    image: "images/mang.jpg",
-    link: "About Mangalica",
-    description:
-      "The Mangalica is a Hungarian breed of domestic pig. It was developed in the mid-19th century by crossbreeding breeds from the nearby Romanian Salonta and Hungarian Bakony with the European wild boar and the Serbian Šumadija breed. The Mangalica pig grows a thick, curly coat of hair. Source: Wikipedia",
-  },
-  {
-    title: "Kunekune",
-    image: "images/kunekune.jpg",
-    link: "About Kunekune",
-    description:
-      "The Kunekune is a small breed of domestic pig from New Zealand. Kunekune are hairy with a rotund build, and may bear wattles hanging from their lower jaws. Their colour ranges from black and white, to ginger, cream, gold-tip, black, brown, and tricoloured. They have a docile, friendly nature. Source: Wikipedia",
-  },
-  {
-    title: "Mangalica",
-    image: "images/mang.jpg",
-    link: "About Mangalica",
-    description:
-      "The Mangalica is a Hungarian breed of domestic pig. It was developed in the mid-19th century by crossbreeding breeds from the nearby Romanian Salonta and Hungarian Bakony with the European wild boar and the Serbian Šumadija breed. The Mangalica pig grows a thick, curly coat of hair. Source: Wikipedia",
-  },
-];
+const getProjects = () => {
+  $.get("/api/projects", (response) => {
+    if (response.statusCode == 200) {
+      addCards(response.data);
+    }
+  });
+};
 
 document.addEventListener("DOMContentLoaded", function () {
   var modal = document.getElementById("modal1");
@@ -128,15 +77,10 @@ const addCards = (items) => {
 $(document).ready(function () {
   $(".dropdown-trigger").dropdown();
   $(".materialboxed").materialbox();
-  $(".modal").modal();
-
   $("#formSubmit").click(() => {
     submitForm();
   });
 
-  $("#clickMeButton").click(() => {
-    clickMe();
-  });
-
-  addCards(cardList);
+  getProjects();
+  $(".modal").modal();
 });
