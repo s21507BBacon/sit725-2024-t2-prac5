@@ -1,4 +1,4 @@
-*.env
-package-lock.json
-package.json
-populateDb.js
+.env
+.env.example
+.env.local
+.env.staging
