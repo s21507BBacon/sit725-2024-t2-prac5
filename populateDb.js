@@ -1,19 +1,16 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
+const Pig = require("../models/pig");
 
-mongoose
-  .connect(process.env.MONGODB_URI)
-  .then(() => console.log("Connected to MongoDB Atlas"))
-  .catch((error) => console.error("Error connecting to MongoDB Atlas:", error));
-
-const pigSchema = new mongoose.Schema({
-  title: String,
-  image: String,
-  link: String,
-  description: String,
-});
-
-const Pig = mongoose.model("Pig", pigSchema);
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI);
+    console.log("Connected to MongoDB Atlas");
+  } catch (error) {
+    console.error("Error connecting to MongoDB Atlas:", error);
+    process.exit(1);
+  }
+};
 
 const pigs = [
   {
@@ -75,13 +72,14 @@ const pigs = [
 ];
 async function populateDatabase() {
   try {
+    await connectDB();
     await Pig.deleteMany({}); // Clear existing data
     const result = await Pig.insertMany(pigs);
     console.log(`${result.length} pigs inserted successfully`);
   } catch (error) {
     console.error("Error populating database:", error);
   } finally {
-    mongoose.connection.close();
+    await mongoose.connection.close();
   }
 }
 
